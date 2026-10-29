@@ -1,0 +1,15 @@
+column,meaning,dtype,unit,missing_values,unique_values,role
+UDI,Unique row identifier,int64,-,0,10000,Identifier (exclude)
+Product ID,Product serial number; first letter = quality type,str,-,0,10000,Identifier (exclude)
+Type,Product quality variant L/M/H,str,-,0,3,Categorical feature
+Air temperature [K],Ambient air temperature,float64,K,0,93,Sensor feature
+Process temperature [K],Process temperature,float64,K,0,82,Sensor feature
+Rotational speed [rpm],Spindle rotational speed,int64,rpm,0,941,Sensor feature
+Torque [Nm],Torque on the tool,float64,Nm,0,577,Sensor feature
+Tool wear [min],Cumulative tool usage time,int64,min,0,246,Sensor feature
+Machine failure,1 if machine failed,int64,0/1,0,2,Target
+TWF,Tool wear failure,int64,0/1,0,2,"Failure mode (post-event, exclude)"
+HDF,Heat dissipation failure,int64,0/1,0,2,"Failure mode (post-event, exclude)"
+PWF,Power failure,int64,0/1,0,2,"Failure mode (post-event, exclude)"
+OSF,Overstrain failure,int64,0/1,0,2,"Failure mode (post-event, exclude)"
+RNF,Random failure,int64,0/1,0,2,"Failure mode (post-event, exclude)"
